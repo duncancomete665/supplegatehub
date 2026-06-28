@@ -1,3 +1,3 @@
-module hash_generator_5dc70d
+module hash_generator_902343
 
 go 1.20
